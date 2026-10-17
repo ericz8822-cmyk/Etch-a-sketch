@@ -1,0 +1,36 @@
+h1,
+.grids {
+    margin: 10px 10px;
+}
+
+.grids {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    background-color: white;
+    border: grey solid 4px;
+    border-radius: 8px;
+    padding: 3px;
+    aspect-ratio: 1 / 1;
+}
+
+.row {
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+
+    flex: auto;
+
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.grid {
+    background-color: rgb(238, 237, 237);
+    border: grey dotted 1px;
+    
+    flex: auto;
+    padding: 1px;
+}
