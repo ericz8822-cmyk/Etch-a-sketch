@@ -59,9 +59,15 @@ function addGrids(num) {
 let btn = document.querySelector('button')
 btn.addEventListener('click', function() {
     let num = prompt('Enter the number of squares per side you want for the new grids', 16);
-    let old = document.querySelector('div');
-    old.remove();
-    addGrids(num);
+    if (num < 1) {
+        alert('please enter an integer above 1')
+    } else if (num > 100) {
+        alert('please enter a number below 100 to prevent from delaying or freezing');
+    } else {
+        let old = document.querySelector('div');
+        old.remove();
+        addGrids(num);
+    }
 })
 
 
