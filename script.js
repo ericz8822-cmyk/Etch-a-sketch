@@ -29,9 +29,9 @@ function hovereffect(individual){
         individual.style['background-color'] = `rgba(${r}, ${g}, ${b}, ${a})`;
         if (a <= 0.9) {
             individual.setAttribute('opacity', Number(a) + 0.1);
-            console.log('opacity changed');
+            // console.log('opacity changed');
         }
-        console.log(a)
+        // console.log(a)
     })
     individual.addEventListener('mouseleave', function() {
         individual.style['background-color'] = 'rgb(238, 237, 237)';
