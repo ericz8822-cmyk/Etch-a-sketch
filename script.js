@@ -1,6 +1,5 @@
 const h1 = document.querySelector('h1');
 const grids = document.querySelector('.grids');
-
 for (let  i = 0; i < 16; i ++) {
     let row = document.createElement('div');
     row.classList.add('row');
@@ -15,3 +14,19 @@ for (let  i = 0; i < 16; i ++) {
         // console.log(`grid ${i+1} ${j+1} created`);
     }
 }
+
+function hovereffect(individual){
+    individual.addEventListener('mouseenter', function() {
+        individual.style['background-color'] = 'black';
+    })
+    individual.addEventListener('mouseleave', function() {
+        individual.style['background-color'] = 'rgb(238, 237, 237)';
+    })
+    console.log('hover effect added');
+}
+
+let grid = document.querySelectorAll('.grid');
+grid.forEach((individual) => {hovereffect(individual)});
+
+
+
