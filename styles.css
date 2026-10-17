@@ -1,10 +1,15 @@
-h1,
+h1, 
 .grids {
     margin: 2px auto;
 }
 
-h1 {
+h1{
     text-align: center;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
 }
 
 .grids {
@@ -39,3 +44,4 @@ h1 {
     flex: auto;
     padding: 1px;
 }
+
