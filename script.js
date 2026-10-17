@@ -21,10 +21,10 @@ for (let  i = 0; i < 16; i ++) {
 
 function hovereffect(individual){
     individual.addEventListener('mouseenter', function() {
-        const max = 150;
-        let r = Math.floor(Math.random() * max);
-        let g = Math.floor(Math.random() * max);
-        let b = Math.floor(Math.random() * max);
+        const max = 76;
+        let r = Math.floor(Math.random() * 50 + 50);
+        let g = Math.floor(Math.random() * 76 + 180);
+        let b = Math.floor(Math.random() * 30 + 40);
         let a = individual.getAttribute('opacity');
         individual.style['background-color'] = `rgba(${r}, ${g}, ${b}, ${a})`;
         if (a <= 0.9) {
