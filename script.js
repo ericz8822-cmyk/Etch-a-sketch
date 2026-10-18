@@ -11,6 +11,9 @@ for (let  i = 0; i < 16; i ++) {
         let grid = document.createElement('div');
         grid.classList.add('grid');
         grid.id = `grid ${i+1} ${j+1}`;
+        grid.setAttribute('r', Math.floor(Math.random() * 50 + 50));
+        grid.setAttribute('g', Math.floor(Math.random() * 76 + 180));
+        grid.setAttribute('b', Math.floor(Math.random() * 30 + 40));
         grid.setAttribute('opacity', 0.3);
         row.appendChild(grid);
         // console.log(`grid ${i+1} ${j+1} created`);
@@ -22,9 +25,9 @@ for (let  i = 0; i < 16; i ++) {
 function hovereffect(individual){
     individual.addEventListener('mouseenter', function() {
         const max = 76;
-        let r = Math.floor(Math.random() * 50 + 50);
-        let g = Math.floor(Math.random() * 76 + 180);
-        let b = Math.floor(Math.random() * 30 + 40);
+        let r = individual.getAttribute('r');
+        let g = individual.getAttribute('g');
+        let b = individual.getAttribute('b');
         let a = individual.getAttribute('opacity');
         individual.style['background-color'] = `rgba(${r}, ${g}, ${b}, ${a})`;
         if (a <= 0.9) {
@@ -34,10 +37,13 @@ function hovereffect(individual){
         // console.log(a)
     })
     individual.addEventListener('mouseleave', function() {
-        // individual.style['background-color'] = 'rgb(238, 237, 237)';
+        let r = individual.getAttribute('r');
+        let g = individual.getAttribute('g');
+        let b = individual.getAttribute('b');
+        let a = individual.getAttribute('opacity');
         individual.animate(
             [
-                {backgroundColor:'black'},
+                {backgroundColor:`rgba(${r}, ${g}, ${b}, ${a})`},
                 {backgroundColor:'rgb(238, 237, 237)'}
             ],
             {
@@ -68,6 +74,9 @@ function addGrids(num) {
             let grid = document.createElement('div');
             grid.classList.add('grid');
             grid.id = `grid ${i+1} ${j+1}`;
+            grid.setAttribute('r', Math.floor(Math.random() * 50 + 50));
+            grid.setAttribute('g', Math.floor(Math.random() * 76 + 180));
+            grid.setAttribute('b', Math.floor(Math.random() * 30 + 40));
             grid.setAttribute('opacity', 0.3);
             row.appendChild(grid);
             // console.log(`grid ${i+1} ${j+1} created`);
