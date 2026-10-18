@@ -15,7 +15,7 @@ button {
 .grids {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 0px;
 
     background-color: white;
     border: grey solid 4px;
@@ -34,7 +34,7 @@ button {
 
     display: flex;
     flex-direction: row;
-    gap: 2px;
+    gap: 0px;
 }
 
 .grid {
