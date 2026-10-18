@@ -34,7 +34,18 @@ function hovereffect(individual){
         // console.log(a)
     })
     individual.addEventListener('mouseleave', function() {
-        individual.style['background-color'] = 'rgb(238, 237, 237)';
+        // individual.style['background-color'] = 'rgb(238, 237, 237)';
+        individual.animate(
+            [
+                {backgroundColor:'black'},
+                {backgroundColor:'rgb(238, 237, 237)'}
+            ],
+            {
+                duration: 10000,
+                fill: 'forwards',
+                easing: 'ease-in-out'
+            }
+        )
     })
     console.log('hover effect added');
 }
