@@ -47,7 +47,7 @@ function hovereffect(individual){
                 {backgroundColor:'rgb(238, 237, 237)'}
             ],
             {
-                duration: 10000,
+                duration: 30000,
                 fill: 'forwards',
                 easing: 'ease-in-out'
             }
